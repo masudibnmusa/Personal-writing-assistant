@@ -86,7 +86,7 @@ writing-assistant/
 ### Installation
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/masudibnmusa/Personal-writing-assistant.git
 cd writing-assistant
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
@@ -121,20 +121,6 @@ Set the following in `.env` (see `.env.example`):
 ANTHROPIC_API_KEY=your_key_here
 MODEL_NAME=claude-sonnet-4-6
 ```
-
-## Status / Roadmap
-
-- [x] Project structure defined
-- [ ] Sample collection (paste / file upload)
-- [ ] Style analyzer (LLM-based extraction)
-- [ ] Style profile schema + storage
-- [ ] Prompt builder + generation
-- [ ] Content-type templates (email, post, message)
-- [ ] Feedback loop: diff tracking
-- [ ] Feedback loop: profile refinement from edits
-
-> **Note:** The feedback loop (`diff_tracker.py`, `learner.py`) is intentionally scoped as a v2 feature. Automatically inferring *why* an edit was made (tone vs. factual correction vs. one-off preference) from a raw diff is hard to get right. The initial version supports manual profile editing; automated learning comes once real edit patterns are observed.
-
 ## Design Notes
 
 - **Why prompt engineering instead of fine-tuning?** Cheaper, faster to iterate, fully transparent (you can read exactly what's being injected), and easy to update as your writing style evolves — no retraining required.
