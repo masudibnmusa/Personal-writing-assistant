@@ -1,0 +1,20 @@
+# Environment
+.env
+venv/
+__pycache__/
+*.pyc
+
+# Data (user-specific, don't commit)
+data/writing_samples/*
+data/style_profiles/*
+data/generation_history/*
+!data/writing_samples/.gitkeep
+!data/style_profiles/.gitkeep
+!data/generation_history/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
